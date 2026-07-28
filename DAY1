@@ -1,4 +1,4 @@
-//1
+//(" as a string)
 
 public class Main
 {
@@ -7,7 +7,7 @@ public class Main
 	}
 }
 
-//2
+//(\n as output)
 
 public class Main
 {
