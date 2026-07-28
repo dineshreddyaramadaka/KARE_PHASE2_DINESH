@@ -51,3 +51,16 @@ public class Main
 		System.out.println("The character is :"+ ch);
 	}
 }
+
+//write a java program to get a float input from user & print it with two decimal points
+//float input & 2 decimal output
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj=new Scanner(System.in);
+	    float f=obj.nextFloat();
+		System.out.printf("%.2f",f);
+	}
+}
