@@ -27,3 +27,27 @@ public class Main
 		System.out.print(a);
 	}
 }
+
+//(float input)
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj=new Scanner(System.in);
+	    float f=obj.nextFloat();
+		System.out.println(f);
+	}
+}
+
+//(char input & output type)
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj=new Scanner(System.in);
+	    char ch=obj.next().charAt(0);
+		System.out.println("The character is :"+ ch);
+	}
+}
