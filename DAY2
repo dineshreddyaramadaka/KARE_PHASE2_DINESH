@@ -235,3 +235,24 @@ public class Main
 		}
 	}
 }
+
+//to check the railway time is valid or not
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj=new Scanner(System.in);
+	    int hour=obj.nextInt();
+	    int minute=obj.nextInt();
+	    int second=obj.nextInt();
+	    if (hour >= 0 && hour <= 23 && minute >= 0 && minute <= 59 && second >= 0 && second <= 59)
+	    {
+		    System.out.println("valid");
+	    }
+		else
+		{
+	    	System.out.println("invalid");
+		}
+	}
+}
