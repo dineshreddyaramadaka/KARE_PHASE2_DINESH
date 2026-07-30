@@ -123,3 +123,22 @@ public class Main
 		}
 	}
 }
+
+//if(a%3=0) else print remainder
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj=new Scanner(System.in);
+	    int a=obj.nextInt();
+	    if(a%3==0)
+	    {
+		    System.out.println("Divisible by 3");
+	    }
+		else
+		{
+	    	System.out.println("Not Divisible by 3 and Remainder is " +a%3);
+		}
+	}
+}
