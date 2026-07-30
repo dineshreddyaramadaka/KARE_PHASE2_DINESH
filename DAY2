@@ -142,3 +142,24 @@ public class Main
 		}
 	}
 }
+
+//Greatest of 2 numbers
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj=new Scanner(System.in);
+	    int a,b;
+	    a=obj.nextInt();
+	    b=obj.nextInt();
+	    if(a>b)
+	    {
+		    System.out.println(a+" is Greater");
+	    }
+		else
+		{
+	    	System.out.println(+b+" is Greater");
+		}
+	}
+}
