@@ -189,3 +189,27 @@ public class Main
 		}
 	}
 }
+
+//3 multiple print hi, 5 hello, 3&5 hihello
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj=new Scanner(System.in);
+	    int a;
+	    a=obj.nextInt();
+	    if(a%3==0)
+	    {
+		    System.out.println("hi");
+	    }
+	    else if(a%3==0 && a%5==0)
+	    {
+	        System.out.println("hihello");
+	    }
+		else
+		{
+	    	System.out.println("hello");
+		}
+	}
+}
