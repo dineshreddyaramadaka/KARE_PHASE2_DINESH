@@ -39,3 +39,16 @@ public class Main
 	    System.out.println("hello");
 	}
 }
+
+//if(a=4) else
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int a=3;
+	    if(a==4)
+	    System.out.println(a+5);
+	    else
+	    System.out.println(a-8);
+	}
+}
