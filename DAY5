@@ -175,3 +175,31 @@ class Main
     }
 }
 
+//write a java program to check neon number
+//1 get user input n=9
+//2 find the square of n=9^2=81
+//3 sum all the digits of square of n sum=1+8=9
+//4 the given number n & sum of each digit in the square value 
+//5 if both are equal then we consider as neon number
+
+import java.util.*;
+class Main
+{
+    public static void main (String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int temp=n;
+        int sum=0,d;
+        n=n*n;
+        while(n!=0)
+        {
+            d=n%10;
+            sum=sum+d;
+            n=n/10;
+        }
+        if(temp==sum)
+        System.out.print("NEON NUMBER");
+        else
+        System.out.print("NOT A NEON NUMBER");
+    }
+}
