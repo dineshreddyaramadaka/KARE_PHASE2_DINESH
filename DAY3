@@ -141,7 +141,41 @@ public class Main
 	    Scanner obj=new Scanner(System.in);
 	    int n=obj.nextInt();
 	    for(row=0;row<n;row++,System.out.println()){
-	        for(col=0;col<=n-row;col++)
+	        for(col=0;col<=n-row-1;col++)
+		    System.out.print("*");
+	    }
+	}
+}
+
+//Basepattern4
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int i,row,col;
+	    Scanner obj=new Scanner(System.in);
+	    int n=obj.nextInt();
+	    for(row=0;row<n;row++,System.out.println()){
+	        for(col=0;col<=2*row-2;col++)
+		    System.out.print("*");
+	    }
+	}
+}
+
+//Basepattern3+1
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj=new Scanner(System.in);
+	    int n=obj.nextInt();
+	    int row,col;
+	    for(row=0;row<n;row++,System.out.println()){
+	        for(col=0;col<=n-row-2;col++)
+		    System.out.print(" ");
+		    for(col=0;col<=n;col++)
 		    System.out.print("*");
 	    }
 	}
