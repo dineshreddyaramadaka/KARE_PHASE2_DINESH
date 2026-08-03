@@ -101,14 +101,17 @@ public class Main
 
 //Basepattern1
 
-
+import java.util.*;
 public class Main
 {
 	public static void main(String[] args) {
 	    int i,row,col;
-	    for(row=0;row<5;row++,System.out.println()){
-	        for(col=0;col<5;col++)
+	    Scanner obj=new Scanner(System.in);
+	    int n=obj.nextInt();
+	    for(row=0;row<n;row++,System.out.println()){
+	        for(col=0;col<n;col++)
 		    System.out.print("*");
 	    }
 	}
 }
+
