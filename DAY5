@@ -147,3 +147,31 @@ class Main {
             System.out.print("Not a palindrone number");
     }
 }
+
+//write a java program to check harshad number
+//1 get user input n=18
+//2 find the sum of digit sum=9
+//3 to check the given number is completely divisible by sum of digits(18%9==0)
+//4 if it is true print harshad number
+
+import java.util.*;
+class Main
+{
+    public static void main (String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int temp=n;
+        int sum=0,d;
+        while(n!=0)
+        {
+            d=n%10;
+            sum=sum+d;
+            n=n/10;
+        }
+        if(temp%sum==0)
+        System.out.print("HARSHAD NUMBER");
+        else
+        System.out.print("NOT A HARSHAD NUMBER");
+    }
+}
+
