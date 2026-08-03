@@ -203,3 +203,31 @@ class Main
         System.out.print("NOT A NEON NUMBER");
     }
 }
+
+//write a java program to check perfect number
+//1 get the input from user n=6
+//2 find the factor of n value including 1 excluding the given number(1,2,3)
+//3 find the sum of the factors sum=1+2+3=6
+//4 compare sum & given number
+//5 if both are equal print perfect number
+
+import java.util.*;
+class Main
+{
+    public static void main (String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int temp=n;
+        int sum=0,d;
+        while(n!=0)
+        {
+            d=n%10;
+            sum=sum+d;
+            n=n/10;
+        }
+        if(temp==sum)
+        System.out.print("PERFECT NUMBER");
+        else
+        System.out.print("NOT A PERFECT NUMBER");
+    }
+}
