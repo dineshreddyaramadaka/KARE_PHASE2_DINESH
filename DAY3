@@ -115,3 +115,19 @@ public class Main
 	}
 }
 
+//Basepattern2
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int i,row,col;
+	    Scanner obj=new Scanner(System.in);
+	    int n=obj.nextInt();
+	    for(row=0;row<n;row++,System.out.println()){
+	        for(col=0;col<=row;col++)
+		    System.out.print("*");
+	    }
+	}
+}
+
