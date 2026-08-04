@@ -1,0 +1,29 @@
+//  Strong number
+//1 get the input from user n=145
+//2 find the factorial value of each digit(1!, 4!, 5!)
+//3 sum all the factorial values sum=1+24+120=145
+//4 if sum==n print Strong number
+
+import java.util.*;
+class Main
+{
+    public static void main (String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int temp=n;
+        int d,fact,sum=0;
+        while(n!=0)
+        {
+            fact=1;
+            d=n%10;
+            for(int i=1;i<=d;i++)
+            fact=fact*i;
+            sum=sum+fact;
+            n=n/10;
+        }
+        if(temp==sum)
+        System.out.print("STRONG NUMBER");
+        else
+        System.out.print("NOT A STRONG NUMBER");
+    }
+}
