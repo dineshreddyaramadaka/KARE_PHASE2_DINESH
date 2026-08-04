@@ -27,3 +27,37 @@ class Main
         System.out.print("NOT A STRONG NUMBER");
     }
 }
+
+//  Armtrong number
+//1 get the input from user n=153
+//2 count the no.of digits count=3
+//3 Segregate each digit & make the power value as per count value 1^3 = 1 5^3 = 125 3^3 = 27
+//4 find the sum of all power values sum=1+125+27=153
+//5 if sum==given number print Armstrong number
+// Math.pow(basevalue,powervalue)
+
+import java.util.*;
+class Main
+{
+    public static void main (String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int temp=n,c=0,d,sum=0;
+        while(n!=0)
+        {
+            n=n/10;
+            c++;
+        }
+        n=temp;
+        while(n!=0)
+        {
+            d=n%10;
+            sum=sum+(int)Math.pow(d,c);
+            n=n/10;
+        }
+        if(temp==sum)
+        System.out.print("ARMSTRONG NUMBER");
+        else
+        System.out.print("NOT A STRONG NUMBER");
+    }
+}
