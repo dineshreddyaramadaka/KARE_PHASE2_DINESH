@@ -96,3 +96,35 @@ class Main {
         System.out.print("NOT AN ADAM NUMBER");
     }
 }
+
+//  amicable pair
+//1 get 2 numbers from user n1=220, n2=284
+//2 find the sum of factors of n1=s1
+//3 find the sum of factors of n2=s2
+//4 compare s1==n2 && s2==n1
+//5 if the condition is true print amicable pair
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n1=sc.nextInt();
+        int n2=sc.nextInt();
+	    int i,j;
+	    int s1=0,s2=0;
+        for(i=1;i<=n1/2;i++)
+        {
+            if(n1%i==0)
+            s1+=i;
+        }
+        for(j=1;j<=n2/2;j++)
+        {
+            if(n2%j==0)
+            s2+=j;
+        }
+	    if(s1==n2 && s2==n1)
+        System.out.print("amicable pair");
+        else
+        System.out.print("not an amicable pair");
+    }
+}
