@@ -61,3 +61,38 @@ class Main
         System.out.print("NOT A STRONG NUMBER");
     }
 }
+
+//  Adam number
+//1 get the input from user n=12
+//2 find the square of given number sn=12*12=144
+//3 find the reverse of given number rn=21
+//4 find the square of reverse number srn=21*21=441
+//5 reverse the square of reverse number rsrn=144
+//6 compare sn=rsrn 144=144 if both are equal print ADAM NUMBER
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int sn=n*n;
+        int rn=0,d,ans=0;
+        while(n!=0)
+        {
+            d=n%10;
+            rn=rn*10+d;
+            n=n/10;
+        }
+        int srn=rn*rn;
+        while(srn!=0)
+        {
+            d=srn%10;
+            ans=ans*10+d;
+            srn=srn/10;
+        }
+        if(ans==sn)
+        System.out.print("ADAM NUMBER");
+        else
+        System.out.print("NOT AN ADAM NUMBER");
+    }
+}
