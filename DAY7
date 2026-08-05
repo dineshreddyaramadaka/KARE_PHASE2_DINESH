@@ -1,0 +1,128 @@
+//print the input(Arrays)
+//5
+//12 31 52 34 99
+//12 31 52 34 99
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int arr[]=new int[n];
+        int i;
+        for(i=0;i<n;i++)
+        arr[i]=obj.nextInt();
+        for(i=0;i<n;i++)
+        System.out.print(arr[i]+" ");
+    }
+}
+
+//write a java program to find the sum of array elements
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int arr[]=new int[n];
+        int i,sum=0;
+        for(i=0;i<n;i++){
+            arr[i]=obj.nextInt();
+            sum=sum+arr[0];
+        }
+        System.out.print("Sum of array Elements "+sum);
+    }
+}
+
+//write a java program to find the odd even element count in the given array
+//i/p               o/p
+//5
+//10 2 34 5 23      odd element count: 2
+//                  even element count: 3
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int arr[]=new int[n];
+        int i,oc=0,ec=0;
+        for(i=0;i<n;i++) {
+        arr[i]=obj.nextInt();
+        if(arr[i]%2==0)
+        ec++;
+        else
+        oc++;
+    }
+        System.out.println("odd element count: "+oc);
+        System.out.println("even element count: "+ec);
+    }
+}
+
+//replacing the elements in the index
+//i/p                         o/p
+//5                  
+// 10 20 30 40 50          10 20 30 100 50
+//index=3
+//100
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int arr[]=new int[n];
+        int i,index,value;
+        for(i=0;i<n;i++) {
+            arr[i]=obj.nextInt();
+        }
+        index=obj.nextInt();
+        value=obj.nextInt();
+        arr[index]=value;
+        for(i=0;i<n;i++)
+        System.out.print(arr[i]+" ");
+    }
+}
+
+//search an element in the array
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int arr[]=new int[n];
+        int i,index,value,flag=0;
+        for(i=0;i<n;i++) {
+            arr[i]=obj.nextInt();
+        }
+        value=obj.nextInt();
+        for(i=0;i<n;i++){
+        if(arr[i]==value){
+            flag=1;
+        System.out.print("Element Found");
+        break;
+        }
+        }
+        if(flag==0)
+        System.out.print("Not Found");
+    }
+}
+
+//reverse elements in the array
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int arr[]=new int[n];
+        int i;
+        for(i=0;i<n;i++){
+        arr[i]=obj.nextInt();
+        }
+        for(i=n-1;i>=0;i--) {
+        System.out.print(arr[i]+" ");
+        }
+    }
+}
