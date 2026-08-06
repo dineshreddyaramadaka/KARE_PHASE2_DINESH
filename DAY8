@@ -170,3 +170,35 @@ public class Main
 	    System.out.print("MAXIMUM ELEMENT:" +min);
 	}
 }
+
+//Second Maximum Value
+//i/p            o/p
+//5
+//1 2 3 4 5       4
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int arr[] = new int[n];
+        int i;
+        for (i = 0; i < n; i++) {
+            arr[i] = obj.nextInt();
+        }
+        int max = Integer.MIN_VALUE;
+        int smax = Integer.MIN_VALUE;
+
+        for (i = 0; i < n; i++) {
+            if (arr[i] > max) {
+                smax = max;
+                max = arr[i];
+            } else if (arr[i] > smax && arr[i] != max) {
+                smax = arr[i];
+            }
+        }
+
+        System.out.print("SECOND MAXIMUM ELEMENT:" + smax);
+    }
+}
