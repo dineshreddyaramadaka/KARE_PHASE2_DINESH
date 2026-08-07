@@ -268,3 +268,24 @@ class Main
             System.out.print("Duplicate Element Count: "+c);
     }
 }
+
+//times occured characters
+
+import java.util.*;
+class Main
+    {
+        public static void main (String[] args) {
+            Scanner obj=new Scanner(System.in);
+            String s=obj.nextLine();
+            int arr[]=new int[256];
+            for(char ch:s.toCharArray())
+            {
+                arr[ch]++;
+            }
+            for(int i=0;i<256;i++)
+            {
+                if(arr[i]==2)
+                System.out.print((char)i+" ");
+            }
+    }
+}
