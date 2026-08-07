@@ -122,3 +122,19 @@ class Main
             System.out.print("Total Number of words: "+c);
     }
 }
+
+//write a java program to find the owels count
+
+import java.util.*;
+class Main
+    {
+        public static void main (String[] args) {
+            Scanner obj=new Scanner(System.in);
+            String s=obj.nextLine().toUpperCase();
+            int c=0;
+            for(char ch:s.toCharArray())
+            if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+            c++;
+            System.out.print("Total Number of owels: "+c);
+    }
+}
