@@ -1,0 +1,108 @@
+//write a java program to create & display the 2D array elements
+
+import java.util.*;
+class Main {
+    public static void main (String[] args) {
+        Scanner obj=new Scanner(System.in);
+        System.out.print("Enter no of rows: ");
+        int r=obj.nextInt();
+        System.out.print("Enter no of colms: ");
+        int c=obj.nextInt();
+        int arr[][]=new int[r][c];
+        int i,j;
+        System.out.print("Enter array elements:");
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                arr[i][j]=obj.nextInt();
+            }
+        }
+        for(i=0;i<r;i++,System.out.println())
+        {
+            for(j=0;j<c;j++)
+            {
+                System.out.print(arr[i][j]+" ");
+            }
+        }
+    }
+}
+
+//write a java program to print primary & secondary diagonal elements
+
+import java.util.*;
+class Main {
+    public static void main (String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int arr[][]=new int[n][n];
+        int i,j;
+        System.out.print("Enter array elements: ");
+        for(i=0;i<n;i++)
+        {
+            for(j=0;j<n;j++)
+            {
+                arr[i][j]=obj.nextInt();
+            }
+        }
+        System.out.println("First Diagonal Element: ");
+        for(i=0;i<n;i++)
+        System.out.print(arr[i][i]+" ");
+        System.out.println(" ");
+        System.out.println("Second Diagonal Element: ");
+        for(i=0;i<n;i++)
+        System.out.print(arr[i][n-1-i]+" ");
+    }
+}
+
+//write a java program to transpose the given matrix
+
+import java.util.*;
+class Main {
+    public static void main (String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int r=obj.nextInt();
+        int c=obj.nextInt();
+        int arr[][]=new int[r][c];
+        int tras[][]=new int[c][r];
+        int i,j;
+        System.out.println("Enter array elements:");
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                arr[i][j]=obj.nextInt();
+            }
+        }
+        for(i=0;i<c;i++)
+        {
+            for(j=0;j<r;j++)
+            {
+                tras[i][j]=arr[j][i];
+            }
+        }
+        System.out.println("Transpose Matrix");
+        for(i=0;i<c;i++,System.out.println())
+        {
+            for(j=0;j<r;j++)
+            {
+                System.out.print(tras[i][j]+" ");
+            }
+        }
+    }
+}
+
+//to print length of the string without using inbuilt method
+
+import java.util.*;
+class Main
+    {
+        public static void main (String[] args) {
+            Scanner obj=new Scanner(System.in);
+            String s=obj.nextLine();
+            int c=0;
+            for(char ch:s.toCharArray())
+            c++;
+            System.out.print(c);
+    }
+}
