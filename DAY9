@@ -269,7 +269,7 @@ class Main
     }
 }
 
-//times occured characters
+//two times occured characters
 
 import java.util.*;
 class Main
