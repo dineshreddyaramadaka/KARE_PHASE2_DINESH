@@ -289,3 +289,24 @@ class Main
             }
     }
 }
+
+//no of times a string has occured i.e, frequency
+
+import java.util.*;
+class Main
+    {
+        public static void main (String[] args) {
+            Scanner obj=new Scanner(System.in);
+            String s=obj.nextLine();
+            int arr[]=new int[256];
+            for(char ch:s.toCharArray())
+            {
+                arr[ch]++;
+            }
+            for(int i=0;i<256;i++)
+            {
+                if(arr[i]>0)
+                System.out.println((char)i+" :"+arr[i]);
+            }
+    }
+}
