@@ -1,0 +1,33 @@
+//Binary Search
+
+import java.util.*;
+class Main
+{
+    public static void main (String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int i;
+        int arr[]=new int[n];
+        for(i=0;i<n;i++)
+        arr[i]=obj.nextInt();
+        int t=obj.nextInt();
+        int low=0,flag=0,mid;
+        int high=n-1;
+        while(low<=high)
+        {
+            mid=(low+high)/2;
+            if(arr[mid]==t)
+            {
+                System.out.print("Element is Found");
+                flag=1;
+                break;
+            }
+            else if(arr[mid]<t)
+            low=mid+1;
+            else if(arr[mid]>t)
+            high=mid-1;
+        }
+        if(flag==0)
+        System.out.print("Element is not Found");
+    }
+}
