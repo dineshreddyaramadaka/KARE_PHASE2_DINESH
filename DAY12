@@ -1,5 +1,5 @@
 /*
-WjP to print nth term of fibnoci seriesusing recursion
+WjP to print nth term of fibnoci series using recursion
 */
 import java.util.*;
 public class Main
