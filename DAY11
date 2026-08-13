@@ -1,4 +1,5 @@
-inheritance concept using extends keyword
+//inheritance concept using extends keyword
+
 import java.util.*;
 public class Main
 {
