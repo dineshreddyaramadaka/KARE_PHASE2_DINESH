@@ -1,94 +1,52 @@
-/*
-WjP to print nth term of fibnoci series using recursion
-*/
-import java.util.*;
-public class Main
+class Father
 {
-    static int fib(int n){
-        if(n<=1){
-            return 1;
-        }
-        return fib(n-1)+fib(n-2);
-        
-    }
-	public static void main(String[] args) {
-	Scanner sc=new Scanner(System.in);
-	int n=sc.nextInt();
-	int ans=fib(n);
-	System.out.print("fibnoci series for upto n value "+ans);
-		}
-}
-output:
-10
-fibnoci series for upto n value 89
-
-//No argument constructor
-import java.util.*;
-class Bike{
-    Bike(){
-        System.out.print("Bike has Started");
-    }
-    public static void main(String[] args){
-        Bike obj=new Bike();
-    }
-}//output
-Bike has Started
-
-class Student{
-    
-        int roolno;
-        String name;
-        Student(){
-            System.out.print(roolno+" "+name);
-    }
-    public static void main(String[] args){
-        Student s=new Student();
+    void gen2(){
+        System.out.println("Gold");
     }
 }
-output:
-0 null
-
-//parameterized constructor
-import java.util.*;
-class Student{
-        int rollno;
-        String name;
-        Student(int r,String n){
-            this.rollno=r;
-            this.name=n;
-        }
-        void Display(){
-            System.out.print(rollno+" "+name);
-        }
-    public static void main(String[] args){
-        Student s = new Student(60,"dinesh"); 
-        Student m=new Student(12,"DInesh");
-        m.Display();
-        s.Display();
+class Son extends Father{
+    void gen3(){
+        System.out.println("Diamond");
     }
 }
-12 DInesh60 dinesh
+class Main{
+    public static void main(String args[]){
+        Son s=new Son();
+        Father f=new Father();
+        f.gen2();
+       // f.gen3(); not accessible
+        s.gen2();
+        s.gen3();
+    }
+} 
 
-//parametrized constructor
-import java.util.*;
-class Student{
-    int rollno;
-    String name;
-    Student(int r,String n){
-        this.rollno=r;
-        this.name=n;
-    }
-    Student(Student obj){
-        obj.rollno=21;
-    }
-    void display(){
-        System.out.println(rollno+" "+name);
-    }
-    public static void main(String[] args){
-        Student po = new Student(90,"Dinesh");
-        Student ps=new Student(po);
-        po.display();
+
+class GrandFather{
+    void gen1(){
+        System.out.println("Cash/Money");
     }
 }
-output:
-21 Dinesh
+
+class Father extends GrandFather
+{
+    void gen2(){
+        System.out.println("Gold");
+    }
+}
+class Son extends Father{
+    void gen3(){
+        System.out.println("Diamond");
+    }
+}
+class Main{
+    public static void main(String args[]){
+        Son s=new Son();
+        Father f=new Father();
+        GrandFather GF=new GrandFather();
+        GF.gen1();
+        f.gen2();
+        s.gen1();
+        s.gen2();
+        s.gen3();
+    }
+} 
